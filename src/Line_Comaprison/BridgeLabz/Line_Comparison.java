@@ -1,6 +1,6 @@
 package Line_Comaprison.BridgeLabz;
-/*******Added UC2*******
- * Checking Two Lines are Equal or Not
+/*******Added UC3*******
+ * Checking Two Lines are Equal,Greater or Less than the other Line
  */
 import java.util.Scanner;
 public class Line_Comparison 
@@ -39,13 +39,19 @@ public class Line_Comparison
 		Double l2 = line2.values();
 		String s2 = Double.toString(l2);
 		
+		int cmp = s1.compareTo(s2);	
+
+		if( s1.equals(s2) )
+			System.out.println("Length of line 1 and Line-2 are equal;");
 		
-		if(s1.equals(s2)) 
-		{
-			System.out.println("Length of Line-1 and Length of Line-2 are equal....");
-		}
+		else if( cmp < 1 ) 
+			System.out.println("Length of line 1 is greater");
+
+		else if( l1 > l2)
+			System.out.println("Length of Line-1 is Greater than Length of Line-2");
+		
 		else 
-			System.out.println("Length of Line-1 and Length of Line-2 are not equal.......");
+			System.out.println("Length of Line-1 is less than Length of Line-2");
 			
 	}
 }
