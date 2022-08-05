@@ -1,12 +1,12 @@
 package Line_Comaprison.BridgeLabz;
-/*******Added UC1*******
- * Calculating the Length of Line
+/*******Added UC2*******
+ * Checking Two Lines are Equal or Not
  */
 import java.util.Scanner;
 public class Line_Comparison 
 {
 	public Double Length;
-	public void values()
+	public Double values()
 	{
 		
 		Scanner sc = new Scanner(System.in);
@@ -22,16 +22,30 @@ public class Line_Comparison
 		System.out.println("Enter the value of Y2:-");
 		Double y2 = sc.nextDouble();	
 		
-		Integer Length = (int) Math.sqrt ( Math.pow ( ( x2 - x1 ), 2 ) * Math.pow ( ( y2 - y1 ), 2 ));
+		Length = (Double) Math.sqrt ( Math.pow ( ( x2 - x1 ), 2 ) * Math.pow ( ( y2 - y1 ), 2 ));
 		 System.out.println("Length of the Line->" +Length);
 		 	
+		 return Length;
 			
 	}
 	
 	public static void main(String a[])
 	{
-		Line_Comparison line = new Line_Comparison();
-		line.values();
+		Line_Comparison line1 = new Line_Comparison();
+		Double l1 = line1.values();
+		String s1 = Double.toString(l1);
+		
+		Line_Comparison line2 = new Line_Comparison();
+		Double l2 = line2.values();
+		String s2 = Double.toString(l2);
+		
+		
+		if(s1.equals(s2)) 
+		{
+			System.out.println("Length of Line-1 and Length of Line-2 are equal....");
+		}
+		else 
+			System.out.println("Length of Line-1 and Length of Line-2 are not equal.......");
+			
 	}
-
 }
